@@ -1,5 +1,9 @@
+<div class="task-show-title color-<?= $task['color_id'] ?>">
+    <h2><?= $this->text->e($task['title']) ?></h2>
+</div>
+
 <div class="page-header">
-    <h2><?= t('Relation Graph') ?> : <?= $title ?></h2>
+    <h2><?= t('Relation graph') ?></h2>
 </div>
 
 <style type="text/css">

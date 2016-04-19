@@ -10,7 +10,7 @@ class Plugin extends Base
     {
         $this->route->addRoute('/plugin/relation_graph/:task_id', 'relationgraph', 'show', 'relationgraph');
 
-        $this->template->hook->attach('template:task:sidebar', 'relationgraph:task/sidebar');
+        $this->template->hook->attach('template:task:sidebar:information', 'relationgraph:task/sidebar');
     }
 
     public function getPluginName()
