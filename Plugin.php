@@ -8,8 +8,10 @@ class Plugin extends Base
 {
     public function initialize()
     {
-        $this->route->addRoute('/plugin/relationgraph/:task_id', 'relationgraph', 'show', 'relationgraph');
+        $this->route->addRoute('/relationgraph/:project_id/task/:task_id', 'relationgraph', 'show', 'relationgraph');
+        $this->route->addRoute('/relationgraph/:project_id', 'relationgraph', 'project', 'relationgraph');
 
+        $this->template->hook->attach('template:project:dropdown', 'relationgraph:project/dropdown');
         $this->template->hook->attach('template:task:sidebar:information', 'relationgraph:task/sidebar');
     }
 

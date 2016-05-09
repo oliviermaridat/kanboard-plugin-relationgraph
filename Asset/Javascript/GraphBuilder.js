@@ -17,7 +17,7 @@ $(document).ready(function() {
             navigationButtons: true,
             keyboard: true,
             hover: true
-        }
+        },
     };
 
     var network = new vis.Network(container, data, options);

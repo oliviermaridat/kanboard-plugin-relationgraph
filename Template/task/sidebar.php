@@ -10,6 +10,6 @@
         'Relation graph',
         'RelationgraphController',
         'show',
-        ['plugin' => 'relationgraph', 'task_id' => $task['id']]
+        ['plugin' => 'relationgraph', 'task_id' => $task['id'], 'project_id' => $task['project_id']]
     ) ?>
 </li>
