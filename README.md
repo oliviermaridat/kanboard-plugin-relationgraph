@@ -1,20 +1,26 @@
 Relation Graph Plugin for Kanboard
 ==========================
 
-- Show relations between tasks using a graph library
+Show relations between tasks using a graph library.
 
 Author
 ------
 
 - Xavier Vidal <xavividal@gmail.com>
+- Olivier Maridat <https://github.com/oliviermaridat>
 - License MIT
 
+Requirements
+------
+
+- Kanboard >= 1.0.29
+
 Installation
-------------
+------
 
-- Decompress the archive in the `plugins` folder
+You have the choice between 2 methods:
 
-or
+- Download the zip file and decompress everything under the directory plugins/Relationgraph
+- Clone this repository into the folder plugins/Relationgraph
 
-- Create a folder **plugins/Relationgraph**
-- Copy all files under this directory
+Note: Plugin folder is case-sensitive.

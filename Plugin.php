@@ -20,12 +20,12 @@ class Plugin extends Base
 
     public function getPluginAuthor()
     {
-        return 'Xavier Vidal <xavividal@gmail.com>';
+        return 'Xavier Vidal <xavividal@gmail.com>, Olivier Maridat <https://github.com/oliviermaridat>';
     }
 
     public function getPluginVersion()
     {
-        return '0.0.1';
+        return '1.0.29-1';
     }
 
     public function getPluginDescription()
@@ -35,6 +35,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'xavividal/kanboard-plugin-relation-graph';
+        return 'https://github.com/xavividal/kanboard-plugin-relation-graph';
     }
 }
