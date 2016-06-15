@@ -2,9 +2,9 @@
 
 namespace Kanboard\Plugin\Relationgraph\Controller;
 
-use Kanboard\Controller\Base;
+use Kanboard\Controller\BaseController;
 
-class Relationgraph extends Base
+class RelationgraphController extends BaseController
 {
     public function show()
     {
@@ -19,7 +19,7 @@ class Relationgraph extends Base
                     'title' => $task['title'],
                     'task' => $task,
                     'graph' => $graph,
-                    'project' => $this->project->getById($task['project_id'])
+                    'project' => $this->projectModel->getById($task['project_id'])
                 ]
             )
         );
@@ -59,11 +59,11 @@ class Relationgraph extends Base
                 'column' => $task['column_title'],
                 'priority' => $task['priority'],
                 'assignee' => $task['assignee_name'] ?: $task['assignee_username'],
-                'color' => $this->color->getColorProperties($task['color_id'])
+                'color' => $this->colorModel->getColorProperties($task['color_id'])
             ];
         }
 
-        foreach ($this->taskLink->getAllGroupedByLabel($task['id']) as $type => $links) {
+        foreach ($this->taskLinkModel->getAllGroupedByLabel($task['id']) as $type => $links) {
             foreach ($links as $link) {
                 if (!isset($graph['edges'][$task['id']][$link['task_id']]) &&
                     !isset($graph['edges'][$link['task_id']][$task['id']])) {
@@ -71,7 +71,7 @@ class Relationgraph extends Base
 
                     $this->traverseGraph(
                         $graph,
-                        $this->taskFinder->getDetails($link['task_id'])
+                        $this->taskFinderModel->getDetails($link['task_id'])
                     );
                 }
             }
